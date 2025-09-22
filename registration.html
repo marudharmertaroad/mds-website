@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Marudhar Defence International Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+	<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Marudhar Defence International Academy",
+      "url": "https://marudhardefence.mdsmertaroad.in/",
+      "logo": "https://marudhardefence.mdsmertaroad.in/round logo.png"
+    }
+    </script>
+
+</head>
+<body class="bg-[#FDFBF6] text-[#333]">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+    <img src="round logo.png" alt="MDS Academy Logo" class="h-10">
+    <span class="text-xl font-bold text-[#4A0404] font-playfair">MDIA</span>
+</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="registration.html" class="nav-link-active">Registration</a>
+            </div>
+            <a href="registration.html" class="hidden md:block bg-[#800000] text-white px-5 py-2 rounded-md hover:bg-[#4A0404] transition-colors">Apply Now</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="index.html" class="block nav-link">Home</a>
+            <a href="about.html" class="block nav-link">About Us</a>
+            <a href="registration.html" class="block nav-link-active">Registration</a>
+            <a href="registration.html" class="block bg-[#800000] text-white px-5 py-2 rounded-md mt-2 text-center">Apply Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-[#0A2342] text-white py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold font-playfair">Online Registration Form</h1>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="bg-white p-8 md:p-12 rounded-lg shadow-xl">
+                    <p class="text-gray-600 mb-8 text-center">Please fill out the form below to begin the admission process. Our admissions team will contact you shortly. Fields marked with <span class="text-red-500">*</span> are mandatory.</p>
+                    
+                   <form action="https://formspree.io/f/mrbabbkv" method="POST" class="space-y-8">
+    <!-- Student Information Section -->
+    <div class="border border-gray-200 p-6 rounded-lg">
+        <h3 class="form-section-title">Student's Information</h3>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+            <div>
+                <label for="student-name" class="form-label">Full Name <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <!-- Added name="student_name" -->
+                    <input type="text" id="student-name" name="student_name" class="form-input form-input-with-icon" required>
+                </div>
+            </div>
+            <div>
+                <label for="dob" class="form-label">Date of Birth <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-calendar-days input-icon"></i>
+                    <!-- Added name="date_of_birth" -->
+                    <input type="date" id="dob" name="date_of_birth" class="form-input form-input-with-icon" required>
+                </div>
+            </div>
+            <div>
+                <label for="gender" class="form-label">Gender <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-venus-mars input-icon"></i>
+                    <!-- Added name="gender" -->
+                    <select id="gender" name="gender" class="form-input form-input-with-icon" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="class" class="form-label">Applying for Class <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-graduation-cap input-icon"></i>
+                    <!-- Added name="applying_for_class" -->
+                    <select id="class" name="applying_for_class" class="form-input form-input-with-icon" required>
+                        <option value="">Select Class</option>
+                        <option value="1">Class I</option>
+                        <option value="2">Class II</option>
+                        <option value="3">Class III</option>
+			<option value="4">Class IV</option>
+			<option value="5">Class V</option>
+			<option value="6">Class VI</option>
+			<option value="7">Class VII</option>
+			<option value="8">Class VIII</option>
+			<option value="9">Class IX</option>
+			<option value="10">Class X</option>
+			<option value="11">Class XI</option>
+                        <option value="12">Class XII</option>
+                   </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Parent/Guardian Information Section -->
+    <div class="border border-gray-200 p-6 rounded-lg">
+        <h3 class="form-section-title">Parent's / Guardian's Information</h3>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+            <div>
+                <label for="father-name" class="form-label">Father's Name <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-user-tie input-icon"></i>
+                    <!-- Added name="father_name" -->
+                    <input type="text" id="father-name" name="father_name" class="form-input form-input-with-icon" required>
+                </div>
+            </div>
+            <div>
+                <label for="mother-name" class="form-label">Mother's Name</label>
+                <div class="form-group">
+                    <i class="fas fa-user-shield input-icon"></i>
+                    <!-- Added name="mother_name" -->
+                    <input type="text" id="mother-name" name="mother_name" class="form-input form-input-with-icon">
+                </div>
+            </div>
+            <div>
+                <label for="contact" class="form-label">Contact Number <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-phone input-icon"></i>
+                    <!-- Added name="contact_number" -->
+                    <input type="tel" id="contact" name="contact_number" class="form-input form-input-with-icon" required>
+                </div>
+            </div>
+            <div>
+                <label for="email" class="form-label">Email Address <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <!-- Added name="email" -->
+                    <input type="email" id="email" name="email" class="form-input form-input-with-icon" required>
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <label for="address" class="form-label">Residential Address <span class="text-red-500">*</span></label>
+                <div class="form-group">
+                    <i class="fas fa-map-marker-alt input-icon textarea-icon"></i>
+                    <!-- Added name="address" -->
+                    <textarea id="address" name="address" rows="3" class="form-input form-input-with-icon" required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Submit Button -->
+    <div class="text-center pt-4">
+        <button type="submit" class="w-full md:w-auto bg-[#800000] text-white font-semibold px-12 py-3 rounded-md hover:bg-[#4A0404] transition-colors">Submit Application</button>
+    </div>
+</form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#333] text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold font-playfair mb-4">Marudhar Defence International Academy</h3>
+                    <p class="text-gray-400">Building a foundation of excellence since our inception. Join us to shape a better future.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt w-5"></i>  Marudhar defence school, baba nagar, merta road, nagaur Rajasthan</li>
+                        <li><i class="fas fa-phone w-5"></i> +91 9079018226</li>
+                        <li><i class="fas fa-envelope w-5"></i> marudharmertaroad77@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/15TgAQfvxP/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/marudhardefence_mertaroad?igsh=MThzZXhyZjNid3RkMw==" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Marudhar Defence International Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

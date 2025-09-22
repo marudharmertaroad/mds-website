@@ -1,0 +1,76 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+
+/* Apply base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Optional: subtle background pattern for a retro feel */
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Define custom font family classes */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    @apply text-gray-600 font-medium relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#800000] after:transition-all after:duration-300 hover:after:w-full;
+}
+
+.nav-link-active {
+    @apply text-[#800000] font-bold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#800000];
+}
+
+/* Feature Card Styles on Home Page */
+.feature-card {
+    @apply bg-white p-8 rounded-lg shadow-lg border border-gray-100;
+}
+.icon-bg {
+    @apply w-16 h-16 bg-[#FDFBF6] rounded-full flex items-center justify-center mx-auto;
+}
+
+/* Gallery Item Styles */
+.gallery-item {
+    @apply overflow-hidden rounded-lg shadow-lg;
+}
+.gallery-img {
+    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+}
+
+/* Footer Social Link Styles */
+.social-link {
+    @apply w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-[#800000] transition-colors;
+}
+
+/* Form Styles */
+.form-section-title {
+    @apply text-xl font-semibold font-playfair text-[#4A0404] border-b-2 border-[#800000] pb-2;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.form-input {
+    @apply w-full px-4 py-2 border border-gray-400 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#800000] focus:border-[#800000] focus:bg-white transition-all duration-200;
+}
+.form-group {
+    @apply relative;
+}
+
+/* The icon itself, positioned absolutely inside the container */
+.input-icon {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400;
+    pointer-events: none; /* Allows clicks to go "through" the icon to the input */
+}
+
+/* A special version of the input class with padding on the left for the icon */
+.form-input-with-icon {
+    @apply pl-10; /* Adds padding on the left */
+}
+
+/* Special positioning for the textarea icon (top-left instead of center) */
+.textarea-icon {
+    @apply top-4 -translate-y-0;
+}
